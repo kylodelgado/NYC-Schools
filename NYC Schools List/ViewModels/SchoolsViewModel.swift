@@ -82,7 +82,6 @@ class SchoolsViewModel: ObservableObject {
             let start = self.currentPage * self.pageSize
             let end = start + self.pageSize
             
-            // Load from allSchools instead of existing schools
             let newSchools = Array(self.allSchools[start..<min(end, self.allSchools.count)])
             
             self.schools.append(contentsOf: newSchools)

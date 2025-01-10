@@ -7,12 +7,18 @@
 
 import SwiftUI
 
-struct Background: View {
+struct AcademicBackground: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            LinearGradient(
+                gradient: Gradient(colors: [
+                    Color(.systemBackground),
+                    Color(.systemGray6)
+                ]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+        }
+        .ignoresSafeArea()
     }
-}
-
-#Preview {
-    Background()
 }
